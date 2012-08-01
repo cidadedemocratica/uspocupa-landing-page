@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 server "50.116.34.120", :web, :app, :db, :primary => true
 
-set :application, "uspocupa"
+set :application, "uspocupa-landing-page"
 set :user, "cidadedemocratica"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
