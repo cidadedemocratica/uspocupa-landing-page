@@ -44,6 +44,11 @@ namespace :deploy do
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
+  task :precompile_assets, :roles => :app do
+    run "cd #{deploy_to}/current; bundle exec rake assets:precompile"
+  end
+  after "deploy:finalize_update", "deploy:precompile_assets"
+
   desc "Make sure local git is in sync with remote."
   task :check_revision, :roles => :web do
     unless `git rev-parse HEAD` == `git rev-parse origin/master`
