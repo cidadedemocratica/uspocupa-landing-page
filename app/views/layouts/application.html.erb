@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UspocupaLandingPage</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>#USPOCUPA</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="header">
+    <h1><a href="/">#USPOCUPA</a></h1>
+  </header>
 
-<%= yield %>
+  <%= render 'layouts/carousel' %>
 
+  <div class="container">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Acesse os links para ficar atualizado da campanha e não deixe de enviar sua proposta.</p>
+      <ul>
+        <li><a class="icons-facebook" href="#">facebook</a></li>
+        <li><a class="icons-twitter" href="#">twitter</a></li>
+        <li><a class="icons-youtube" href="#">youtube</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

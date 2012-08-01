@@ -1,3 +1,26 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/utilities/text/replacement";
+
+.o-que-e {
+  @include replace-text("o-que-e.png");
+  height: 36px;
+  width: 95px;
+  margin-bottom: 24px;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.quem-somos {
+  @include replace-text("quem-somos.png");
+  height: 28px;
+  width: 152px;
+  margin: 30px 0 24px;
+}
+
+.em-breve {
+  @include replace-text("em-breve.png");
+  height: 118px;
+  width: 123px;
+  float: right;
+}
