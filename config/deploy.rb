@@ -46,6 +46,7 @@ namespace :deploy do
 
   task :precompile_assets, :roles => :app do
     run "cd #{deploy_to}/current; bundle exec rake assets:precompile"
+    run "touch #{deploy_to}/current/tmp/restart.txt"
   end
   after "deploy:finalize_update", "deploy:precompile_assets"
 
