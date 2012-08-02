@@ -7,10 +7,6 @@
   margin-bottom: 24px;
 }
 
-.text-align-right {
-  text-align: right;
-}
-
 .quem-somos {
   @include replace-text("quem-somos.png");
   height: 28px;
@@ -23,4 +19,13 @@
   height: 118px;
   width: 123px;
   float: right;
+}
+
+.content {
+  text-align: justify;
+  
+  p {
+    text-indent: 35px;
+    margin-bottom: 0;
+  }
 }
