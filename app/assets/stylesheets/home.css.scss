@@ -29,3 +29,10 @@
     margin-bottom: 0;
   }
 }
+
+.participe {
+  @include replace-text("participe.png");
+  float: right;
+  height: 118px;
+  width: 300px;
+}
